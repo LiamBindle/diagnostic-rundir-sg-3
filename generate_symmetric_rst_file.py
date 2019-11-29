@@ -6,7 +6,7 @@ import xarray as xr
 # Generate spots
 def super_gaussian(x, y, A, x0, y0, sigma, P=1):
     return A* np.exp(-(((x-x0)**2/(2*sigma**2))**P + ((y-y0)**2/(2*sigma**2))**P))
-spot = lambda xx, yy, x0, y0: super_gaussian(xx, yy, 3e-20, x0, y0, 1.2, P=1.5)
+spot = lambda xx, yy, x0, y0: super_gaussian(xx, yy, 5e-20, x0, y0, 1.5, P=1.5)
 xx, yy = np.meshgrid(np.linspace(0, 47, 48, dtype=np.float32), np.linspace(0, 47, 48, np.float32))
 zz = np.zeros_like(xx, dtype=np.float32)
 zz += spot(xx, yy, 12, 12)
