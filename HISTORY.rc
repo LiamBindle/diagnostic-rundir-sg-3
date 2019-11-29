@@ -52,18 +52,8 @@ GRID_LABELS: PE24x144-CF
 #==============================================================================
 # Declare collection names and toggle on/off with #
 #==============================================================================
-COLLECTIONS: 'Emissions',
-             'Budget',
-             'CloudConvFlux',
-             'DryDep',
-             'LevelEdgeDiags',      
-             'RadioNuclide',
-             'SpeciesConc',
-             'StateMet_avg',      
-             'StateMet_inst',      
-             'WetLossConv',
-             'WetLossLS',
-             'Transport',
+COLLECTIONS:'SpeciesConc',
+             'StateMet_avg',
 ::
 #==============================================================================
 # Define collections
@@ -198,18 +188,18 @@ COLLECTIONS: 'Emissions',
   SpeciesConc.duration:   010000
   SpeciesConc.mode:       'time-averaged'
   SpeciesConc.fields:     'SpeciesConc_Rn222                   ', 'GIGCchem',
-                              'SpeciesConc_Pb210                   ', 'GIGCchem',
-                              'SpeciesConc_Pb210Strat              ', 'GIGCchem',
-                              'SpeciesConc_Be7                     ', 'GIGCchem',
-                              'SpeciesConc_Be7Strat                ', 'GIGCchem',
-                              'SpeciesConc_Be10                    ', 'GIGCchem',
-                              'SpeciesConc_Be10Strat               ', 'GIGCchem',
-                              'SpeciesConc_PassiveTracer           ', 'GIGCchem',
-                              'SpeciesConc_SF6Tracer               ', 'GIGCchem',
-                              'SpeciesConc_CH3ITracer              ', 'GIGCchem',
-                              'SpeciesConc_COAnthroEmis25dayTracer ', 'GIGCchem',
-                              'SpeciesConc_COAnthroEmis50dayTracer ', 'GIGCchem',
-                              'SpeciesConc_COUniformEmis25dayTracer', 'GIGCchem',
+                              #'SpeciesConc_Pb210                   ', 'GIGCchem',
+                              #'SpeciesConc_Pb210Strat              ', 'GIGCchem',
+                              #'SpeciesConc_Be7                     ', 'GIGCchem',
+                              #'SpeciesConc_Be7Strat                ', 'GIGCchem',
+                              #'SpeciesConc_Be10                    ', 'GIGCchem',
+                              #'SpeciesConc_Be10Strat               ', 'GIGCchem',
+                              #'SpeciesConc_PassiveTracer           ', 'GIGCchem',
+                              #'SpeciesConc_SF6Tracer               ', 'GIGCchem',
+                              #'SpeciesConc_CH3ITracer              ', 'GIGCchem',
+                              #'SpeciesConc_COAnthroEmis25dayTracer ', 'GIGCchem',
+                              #'SpeciesConc_COAnthroEmis50dayTracer ', 'GIGCchem',
+                              #'SpeciesConc_COUniformEmis25dayTracer', 'GIGCchem',
 ::
 #==============================================================================
   StateMet_avg.template:      '%y4%m2%d2_%h2%n2z.nc4',
