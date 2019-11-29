@@ -55,9 +55,9 @@ CS_RES=48 # 24 ~ 4x5, 48 ~ 2x2.5, 90 ~ 1x1.25, 180 ~ 1/2 deg, 360 ~ 1/4 deg
 #------------------------------------------------
 #   Grid Stretching Parameters 
 #------------------------------------------------
-STRETCH_FACTOR=1.3
-TARGET_LAT=0
-TARGET_LAT=-10
+STRETCH_FACTOR=1.0001
+TARGET_LAT=0.0
+TARGET_LON=-10.0
 
 #------------------------------------------------
 #    Debug Options
@@ -93,8 +93,8 @@ MEMORY_DEBUG_LEVEL=0
 # section below. See more information about this on the GCHP wiki.
 #
 Start_Time="20160101 000000"
-End_Time="20160202 000000"
-Duration="00000002 000000"
+End_Time="20160103 010000"
+Duration="00000002 010000"
 
 #------------------------------------------------
 #    Diagnostics
@@ -192,7 +192,7 @@ WetLossLS_mode=${common_mode}
 # on gcgrid do not contain HEMCO variables which will have the same effect
 # as turning the HEMCO restart file option off in GC classic. However, all 
 # output restart files will contain HEMCO restart variables for your next run.
-INITIAL_RESTART=initial_GEOSChem_rst.c48_TransportTracers.nc
+INITIAL_RESTART=advection_diagnostic_GEOSChem_rst.c48_TransportTracers.nc
 
 # You can specify a custom initial restart file here to overwrite:
 # INITIAL_RESTART=your_restart_filename_here
@@ -216,14 +216,14 @@ Checkpoint_Freq="000000"
 #
 # WARNING: these settings will override manual updates you make to input.geos!
 #
-Turn_on_Chemistry=T
-Turn_on_emissions=T
-Turn_on_Dry_Deposition=T
-Turn_on_Wet_Deposition=T
+Turn_on_Chemistry=F
+Turn_on_emissions=F
+Turn_on_Dry_Deposition=F
+Turn_on_Wet_Deposition=F
 Turn_on_Transport=T
-Turn_on_Cloud_Conv=T
-Turn_on_PBL_Mixing=T
-Turn_on_Non_Local_Mixing=T
+Turn_on_Cloud_Conv=F
+Turn_on_PBL_Mixing=F
+Turn_on_Non_Local_Mixing=F
 
 #------------------------------------------------
 #    Timesteps
@@ -269,7 +269,7 @@ TransConv_Timestep_HHMMSS=000500
 #   - There is no need to set diag frequency and duration in this file
 #     since they will be over-written for each run based on days in month
 #
-Num_Runs=16
+Num_Runs=1 
 Monthly_Diag=0
 
 ##########################################################

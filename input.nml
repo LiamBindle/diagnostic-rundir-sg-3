@@ -5,6 +5,6 @@ domains_stack_size = 20000000/
 &fv_core_nml
 do_schmidt = .true.,
 stretch_fac = 1.0001,
-target_lat = -90.0, 
-target_lon = 170.0
+target_lat = 0.0, 
+target_lon = -10.0
 /

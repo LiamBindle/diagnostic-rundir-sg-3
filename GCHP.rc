@@ -13,8 +13,8 @@ GCHP.LM: 72
 
 # Stretched-grid parameters
 GCHP.STRETCH_FACTOR: 1.0001
-GCHP.TARGET_LON: 170.0
-GCHP.TARGET_LAT: -90.0
+GCHP.TARGET_LON: -10.0
+GCHP.TARGET_LAT: 0.0
 
 # For FV advection do not use grid comp name prefix
 IM: 48
@@ -66,7 +66,7 @@ RECORD_REF_TIME: 000000
 # Chemistry/AEROSOL Model Restart Files
 # Enter +none for GIGCchem_INTERNAL_RESTART_FILE not use an initial restart file
 # -------------------------------------
-GIGCchem_INTERNAL_RESTART_FILE:     +initial_GEOSChem_rst.c48_TransportTracers.nc
+GIGCchem_INTERNAL_RESTART_FILE:     +advection_diagnostic_GEOSChem_rst.c48_TransportTracers.nc
 GIGCchem_INTERNAL_RESTART_TYPE:     pnc4
 GIGCchem_INTERNAL_CHECKPOINT_FILE:  gcchem_internal_checkpoint
 GIGCchem_INTERNAL_CHECKPOINT_TYPE:  pnc4
