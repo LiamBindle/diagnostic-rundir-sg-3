@@ -14,5 +14,6 @@ rm -f PET*.log
 rm -f multirun.log
 rm -f logfile.000000.out
 rm -f slurm-*
+rm -f *.log
 rm -f 1
 rm -f EGRESS

@@ -13,7 +13,7 @@ GCHP.LM: 72
 
 # Stretched-grid parameters
 GCHP.STRETCH_FACTOR: 1.0001
-GCHP.TARGET_LON: -10.0
+GCHP.TARGET_LON: 350.0
 GCHP.TARGET_LAT: 0.0
 
 # For FV advection do not use grid comp name prefix

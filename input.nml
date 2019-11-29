@@ -6,5 +6,5 @@ domains_stack_size = 20000000/
 do_schmidt = .true.,
 stretch_fac = 1.0001,
 target_lat = 0.0, 
-target_lon = -10.0
+target_lon = 350.0
 /
