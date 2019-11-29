@@ -53,6 +53,13 @@ NY=6 # Ignore if NXNY_AUTO=ON
 CS_RES=48 # 24 ~ 4x5, 48 ~ 2x2.5, 90 ~ 1x1.25, 180 ~ 1/2 deg, 360 ~ 1/4 deg
 
 #------------------------------------------------
+#   Grid Stretching Parameters 
+#------------------------------------------------
+STRETCH_FACTOR=1.3
+TARGET_LAT=0
+TARGET_LAT=-10
+
+#------------------------------------------------
 #    Debug Options
 #------------------------------------------------
 # Set MAPL debug flag to 0 for no extra MAPL debug log output, or 1 to
@@ -413,6 +420,13 @@ replace_val JM             ${CS_RES_x_6}                 GCHP.rc
 replace_val npx            ${CS_RES}                     fvcore_layout.rc
 replace_val npy            ${CS_RES}                     fvcore_layout.rc
 replace_val GCHP.GRIDNAME  PE${CS_RES}x${CS_RES_x_6}-CF  GCHP.rc
+replace_val GCHP.STRETCH_FACTOR ${STRETCH_FACTOR}        GCHP.rc
+replace_val GCHP.TARGET_LON     ${TARGET_LON}            GCHP.rc
+replace_val GCHP.TARGET_LAT     ${TARGET_LAT}            GCHP.rc
+sed -i "s/^.*do_schmidt\s*=\s*[a-zA-Z\.]*/do_schmidt = .true./g"               input.nml
+sed -i "s/^.*stretch_fac\s*=\s*[0-9\.\-]*/stretch_fac = ${STRETCH_FACTOR}/g"   input.nml
+sed -i "s/^.*target_lat\s*=\s*[0-9\.\-]*/target_lat = ${TARGET_LAT}/g"         input.nml
+sed -i "s/^.*target_lon\s*=\s*[0-9\.\-]*/target_lon = ${TARGET_LON}/g"         input.nml
 
 ####  set input restart filename
 echo " "
