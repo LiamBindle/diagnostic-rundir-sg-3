@@ -428,6 +428,11 @@ sed -i "s/^.*stretch_fac\s*=\s*[0-9\.\-]*/stretch_fac = ${STRETCH_FACTOR}/g"   i
 sed -i "s/^.*target_lat\s*=\s*[0-9\.\-]*/target_lat = ${TARGET_LAT}/g"         input.nml
 sed -i "s/^.*target_lon\s*=\s*[0-9\.\-]*/target_lon = ${TARGET_LON}/g"         input.nml
 
+sed -i "s/^.*STRETCH_FACTOR\s*=\s*[0-9\.\-]*/STRETCH_FACTOR = ${STRETCH_FACTOR}/g"  plot_tracer_over_time.py
+sed -i "s/^.*TARGET_LAT\s*=\s*[0-9\.\-]*/TARGET_LAT = ${TARGET_LAT}/g"              plot_tracer_over_time.py
+sed -i "s/^.*TARGET_LON\s*=\s*[0-9\.\-]*/TARGET_LON = ${TARGET_LON}/g"              plot_tracer_over_time.py
+
+
 ####  set input restart filename
 echo " "
 echo "Initial reestart file:"
